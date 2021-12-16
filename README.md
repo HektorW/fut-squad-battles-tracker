@@ -1,38 +1,39 @@
-# create-svelte
+# FUT Squad Battles Tracker
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+This is a website that will track the rankings for Squad Battles in FUT.
 
-## Creating a project
+The idea is to track how many points are required for each rank at different times throughout every week.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The data will be used to graph out how the points increase over each week and
+hopefully be able to predict the future for how many points will be needed.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+## Data
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+The data will be scraped from https://www.futbin.com/squad-battles/points.
+The idea is to have scheduled job that scrapes the data once every hour.
 
-> Note: the `@next` is temporary
+## Sveltekit
 
-## Developing
+Sveltekit is used because I want to try it in a project.
+There won't be many pages so the need isn't really justified but ¯\\_(ツ)_/¯.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Graph
 
-```bash
-npm run dev
+The data should be graphed out for the week (maybe even more granular as well).
+This should help give a visual feel for when during a week the points increase more or less.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Possible graphing libraries in Svelte:
 
-## Building
+- https://github.com/Rich-Harris/pancake
+- https://layercake.graphics/
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+## Tensorflow
 
-```bash
-npm run build
-```
+It would be cool to be able to make predicitions about the final points for a week
+and Tenserflow might be a good candidate for it.
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+https://codelabs.developers.google.com/codelabs/tfjs-training-regression/#0
+
+## Deployment
+
+Plan is do deploy to Heroku.
