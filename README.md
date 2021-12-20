@@ -37,3 +37,4 @@ https://codelabs.developers.google.com/codelabs/tfjs-training-regression/#0
 ## Deployment
 
 Plan is do deploy to Heroku.
+https://bight.dev/log/deploying-a-sveltekit-application-to-heroku/
